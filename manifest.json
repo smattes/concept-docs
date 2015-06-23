@@ -2,6 +2,7 @@
     "title": "CloudCoreo Documentation",
     "files": [
 	"docs/directorystructure.md",
+	"docs/configurationfiles.md",
 	"docs/cloudservices.md"
     ],
     "maxTocLevel": 3,
