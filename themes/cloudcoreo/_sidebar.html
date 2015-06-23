@@ -1,0 +1,32 @@
+<% toc_level = (level, maxLevel, currentLevel=1) => %>
+    <ul class="nav">
+    <% for entry in level: %>
+        <li>
+            <a href="<%= @baseUrl %><%- entry.slug %>.html#<%= entry.anchor %>"><%= entry.title %></a>
+            <% if entry.childs and currentLevel < maxLevel: %>
+                <%= toc_level(entry.childs, maxLevel, currentLevel + 1) %>
+            <% end %>
+        </li>
+    <% end %>
+    </ul>
+<% end %>
+
+<div class="col-md-3">
+  <nav id="toc" class="hidden-print hidden-xs hidden-sm affix">
+    
+    <%= toc_level(@manifest.tableOfContent, @manifest.maxTocLevel) %>
+    <a href="#top" class="back-to-top">
+      Back to top
+    </a>
+    
+    <% if @manifest.links: %>
+    <nav id="links">
+        <ul>
+            <% for link in @manifest.links: %>
+            <li><a href="<%= link[1] %>"><%= link[0] %></a></li>
+            <% end %>
+        </ul>
+    </nav>
+    <% end %>
+  </nav>
+</div>
