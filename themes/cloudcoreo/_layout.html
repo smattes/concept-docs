@@ -13,12 +13,14 @@
     
     <title>CloudCoreo</title>
     
-    <link rel="shortcut icon" href="https://www.cloudcoreo.com/favicon.ico?v=2" />
-    <link rel="stylesheet" type="text/css" href="https://www.cloudcoreo.com/lib/bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://www.cloudcoreo.com/lib/font-awesome/css/font-awesome.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://www.cloudcoreo.com/css/lib/animatecss/animate.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://www.cloudcoreo.com/css/app.css"/>
-    <link rel="stylesheet" type="text/css" href="https://www.cloudcoreo.com/css/style.css"/>
+    <link rel="shortcut icon" href="/favicon.ico?v=2" />
+    <!--<link rel="stylesheet" type="text/css" href="https://www.cloudcoreo.com/lib/bootstrap/css/bootstrap.min.css"/>-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/lib/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/lib/animatecss/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/app.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
     <link rel="stylesheet" type="text/css" href="<%= @baseUrl %>assets/css/add-to-style.css" />
    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,27 +30,26 @@
 	<![endif]-->
   </head>
   <body>
-    <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
           </button>
-          <a class="navbar-brand" href="https://www.cloudcoreo.com/">
-            <img src="https://www.cloudcoreo.com/img/logo.png" alt="logo" title="logo" />
+          <a class="navbar-brand" href="/">
+            <img src="/img/logo.png" alt="logo" title="logo" />
           </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="https://www.cloudcoreo.com/getstarted">Get Started</a></li>
-            <li><a target="_blank" href="http://docs.cloudcoreo.com/docs/frames/index">Documentation</a></li>
+            <li class="active"><a href="/getstarted">Get Started</a></li>
+            <li><a href="/docs">Documentation</a></li>
             <li><a target="_blank" href="http://blog.cloudcoreo.com">Blog</a></li>
             <li><a target="_blank" href="http://hub.cloudcoreo.com">Hub</a></li>
-            <li><a href="https://www.cloudcoreo.com/contact">Contact</a></li>
-            <li><a href="https://www.cloudcoreo.com/login?page=register">Sign Up</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/login?page=register">Sign Up</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
     </nav>
     <div class="jumbotron" role="main">
@@ -75,11 +76,9 @@
     </div>
     <div id="page" class="container">
       <div class="row">
-	<div class="col-md-3">
-          <%- @include "_sidebar.html" %>
-	</div>
+        <%- @include "_sidebar.html" %>
 	<div class="col-md-9">
-          <div id="content">
+          <div id="content"  data-spy="scroll" data-offset="70">
             <%- @content %>
           </div>
 	</div>
@@ -89,14 +88,14 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-6">
-            <a href="https://www.linkedin.com/company/cloudcoreo"><img alt="facebook icon" height="40" src="https://www.cloudcoreo.com/img/icons/linkedin-64.png"></a>
-            <a href="https://plus.google.com/b/110620252437199091978"><img alt="google plus icon" height="40" src="https://www.cloudcoreo.com/img/icons/google-plus-64.png"></a>
-            <a href="https://twitter.com/cloudcoreo"><img alt="twitter icon" height="40" src="https://www.cloudcoreo.com/img/icons/twitter-64.png"></a>
+            <a href="https://www.linkedin.com/company/cloudcoreo"><img alt="facebook icon" height="40" src="/img/icons/linkedin-64.png"></a>
+            <a href="https://plus.google.com/b/110620252437199091978"><img alt="google plus icon" height="40" src="/img/icons/google-plus-64.png"></a>
+            <a href="https://twitter.com/cloudcoreo"><img alt="twitter icon" height="40" src="/img/icons/twitter-64.png"></a>
           </div>
           <div class="col-xs-6 text-right">
             <div>
-              <a target="_blank" href="http://hub.cloudcoreo.com"><img alt="search icon" height="40" src="https://www.cloudcoreo.com/img/icons/search-64.png"></a>
-              <a href="https://www.cloudcoreo.com/contact"><img alt="help icon" height="40" src="https://www.cloudcoreo.com/img/icons/help-64.png"></a>
+              <a target="_blank" href="http://hub.cloudcoreo.com"><img alt="search icon" height="40" src="/img/icons/search-64.png"></a>
+              <a href="/contact"><img alt="help icon" height="40" src="/img/icons/help-64.png"></a>
             </div>
           </div>
         </div>

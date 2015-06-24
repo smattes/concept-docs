@@ -5,3 +5,10 @@ li>ul.nav  {
   font-size: 18px;
   font-weight: 400;
 }
+.affix {
+    top:70px;
+    position: fixed;
+}
+.affix-bottom {
+    position: absolute;
+}

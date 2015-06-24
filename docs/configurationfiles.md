@@ -149,6 +149,43 @@ coreo_aws_ec2_elb 'my-elb' do
 end
 ```
 
-The ***anchor*** in this is the elb resource. What this means is that anything above that has not already overridden something will be considered a prerequisite of the resource doing the overrideing (the key). This means that the root level `services/config.rb` file's coreo_aws_ec2_elb resource block will override the one found in the `extends/services/config.rb` file. Not only that, but all the resources above the key in the root level will maintain order and override with the key. The final compliation
+The ***anchor*** in this is the elb resource. What this means is that anything above that has not already overridden something will be considered a prerequisite of the resource doing the overrideing (the key). This means that the root level `services/config.rb` file's coreo_aws_ec2_elb resource block will override the one found in the `extends/services/config.rb` file. Not only that, but all the resources above the key in the root level will maintain order and override with the key. The final compliation will be a merge of the two files with the *anchor* located in the same place as the orriginal, with any other non-overriding resources preceding it from the overriding file. Here is what the compiled version would become.
+```
+coreo_aws_vpc_subnet 'public-subnet' do
+   vpc 'my-vpc'
+   map_public_ip_on_launch true
+end
+
+coreo_aws_vpc_subnet 'private-subnet' do
+   vpc 'my-vpc'
+   map_public_ip_on_launch false
+end
+
+coreo_aws_ec2_securityGroup 'my-elb-sg' do
+   vpc 'my-vpc'
+   allows [ 
+            { 
+              :direction => :ingress,
+              :protocol => :tcp,
+              :ports => ${INGRESS_PORTS},
+              :cidrs => ${INGRESS_CIDRS}
+            }
+          ]
+end
+
+coreo_aws_ec2_elb 'my-elb' do
+   type 'internal'
+   subnet 'private-subnet'
+   security_groups ['my-elb-sg']
+end
+```
+The '*public-subnet*' resource has been included from the `extends/services/config.rb` file, while the '*my-elb*' from the `extends/services/config.rb` essentially *becomes* the '*private-subnet*' + '*my-elb-sg*' + '*my-elb*'.
+
 ### Script Order
-Defined by the `order.yaml` file
+Defined by the `order.yaml` file is the configuration file that travels along with and is located in the `boot-scripts` directory. The format is *yaml* which means that **tab indentations are an error**. Here is an example:
+```
+order:
+    - install_packges.sh
+    - run_chef.sh
+```
+CloudCoreo will run (as root) each script in order. The proccess is to **chmod +x** the files and run with a **./<filename>** so make sure the shebang is correct.
