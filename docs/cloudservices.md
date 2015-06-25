@@ -18,7 +18,7 @@ For Example:
 coreo_aws_vpc_vpc "my-vpc" do
   action :sustain
   cidr "12.0.0.0/16"
-  Internet_gateway true
+  internet_gateway true
 end
 ```
 In the above example, CloudCoreo would create a VPC with the CIDR address of "12.0.0.0/16" and attach an *internet gateway* to the VPC to allow traffic to the public subnets (which haven't been defined in this specific example).
