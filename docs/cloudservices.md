@@ -173,4 +173,5 @@ end
 ```
 The '*public-subnet*' resource has been included from the `extends/services/config.rb` file, while the '*my-elb*' from the `extends/services/config.rb` essentially *becomes* the '*private-subnet*' + '*my-elb-sg*' + '*my-elb*'.
 
-
+### Api Docs
+If you are working on services within CloudCoreo, you need to know what options, parameters etc you can use. For those head over to our [API Documentation](http://docs.cloudcoreo.com/docs/frames/index).

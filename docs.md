@@ -1,3 +1,26 @@
+# The Stack
+'Stack' is, admitedly, very much an overused term in our industry. It seems that for some reason, everyone is quick to redefine it. 
+
+...and we are no different!
+
+A 'stack' for us is everything in your cloud deployment. ***Virtutual Machines*** are a given, but we include *everything else* as well. What does *everything else* actually mean? Well, *evertyhing*.
+
+* Networks
+* Managed Services
+  * Databases
+  * Search
+  * Queues
+  * Email services
+  * Transcoding
+  * etc.
+* Hard Drives
+* Network Cards
+* DNS Entries
+* Scaling Policies
+
+The list goes on and on.
+
+To create or maintain a `stack` in CloudCoreo, you have to know how it is all set up. When you see it all spelled out, it is really quite simple. The following is our attempt to spell it out.
 ## Directory Structure
 CloudCoreo relies on convention over configuartaion for the most part. Each repository can contain whatever you like, which is useful for running scripts or laying down code you rely on. There are some directories that we reserve the right to, and this is a list of those directories as well as whay they do.
 
