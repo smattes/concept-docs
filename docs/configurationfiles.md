@@ -1,5 +1,5 @@
 ## Configuration Files
-There are a few configuration files that exist in the CloudCoreo convention. These files are all overrideable.
+There are a few configuration files that exist in the CloudCoreo convention. These files are all override-able.
 
 ### Variable Config
 Defined by the `config.yaml` file.
@@ -10,7 +10,7 @@ The `config.yaml` file defines variables for the stack. It resides in the `<repo
 Defined by the `order.yaml` file is the configuration file that travels along with and is located in the `boot-scripts` directory. The format is *yaml* which means that **tab indentations are an error**. Here is an example:
 ```
 order:
-    - install_packges.sh
+    - install_packages.sh
     - run_chef.sh
 ```
-CloudCoreo will run (as root) each script in order. The proccess is to **chmod +x** the files and run with a **./<filename>** so make sure the shebang is correct.
+CloudCoreo will run (as root) each script in order. The process is to **chmod +x** the files and run with a **./<filename>** so make sure the shebang is correct.
