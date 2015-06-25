@@ -1,2 +1,3 @@
 ## Variables
-This will go over the variables
+Documentation on the usage of template variables is **Coming Soon!!**
+

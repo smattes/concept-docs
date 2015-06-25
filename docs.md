@@ -21,6 +21,7 @@ A 'stack' for us is everything in your cloud deployment. ***Virtutual Machines**
 The list goes on and on.
 
 To create or maintain a `stack` in CloudCoreo, you have to know how it is all set up. When you see it all spelled out, it is really quite simple. The following is our attempt to spell it out.
+
 ## Directory Structure
 CloudCoreo relies on convention over configuartaion for the most part. Each repository can contain whatever you like, which is useful for running scripts or laying down code you rely on. There are some directories that we reserve the right to, and this is a list of those directories as well as whay they do.
 
@@ -78,6 +79,7 @@ For example, if you have a directory structure like this,
 ```
 Because the directory structure within the override directory matches the structure of the parent, the 'order.yaml' file will be ignored in the stack-a directory and instead the overrides/stack-a order.yaml file will be used.
 
+
 ## Configuration Files
 There are a few configuration files that exist in the CloudCoreo convention. These files are all overrideable.
 
@@ -94,6 +96,7 @@ order:
     - run_chef.sh
 ```
 CloudCoreo will run (as root) each script in order. The proccess is to **chmod +x** the files and run with a **./<filename>** so make sure the shebang is correct.
+
 ## Cloud Services
 Defined by the `config.rb` file.
 
@@ -269,4 +272,14 @@ end
 ```
 The '*public-subnet*' resource has been included from the `extends/services/config.rb` file, while the '*my-elb*' from the `extends/services/config.rb` essentially *becomes* the '*private-subnet*' + '*my-elb-sg*' + '*my-elb*'.
 
+### Api Docs
+If you are working on services within CloudCoreo, you need to know what options, parameters etc you can use. For those head over to our [API Documentation](http://docs.cloudcoreo.com/docs/frames/index).
 
+## Variables
+Documentation on the usage of template variables is **Coming Soon!!**
+
+
+# The CLI Tool
+Documentation on the CLI tool will be included here soon. For now, head over to [the Github open-source repo](https://github.com/CloudCoreo/cloudcoreo-cli) for complete documentation.
+# The Web UI
+Documentation for how to use the web interface is **Coming Soon!!**
