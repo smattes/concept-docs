@@ -1,13 +1,11 @@
 {
     "title": "CloudCoreo Documentation",
     "files": [
-	"docs/directorystructure.md",
-	"docs/configurationfiles.md",
-	"docs/cloudservices.md"
+	"docs.md"
     ],
     "maxTocLevel": 3,
     "css": "https://www.cloudcoreo.com/css/style.css",
     "links": [
-	["Service API Docs", "http://docs.cloudcoreo.com/docs/frames/index"]
+	["Cloud Service API Docs", "http://docs.cloudcoreo.com/docs/frames/index", "_blank"]
     ]
 }

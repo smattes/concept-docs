@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title><%= @manifest.title or @title %></title>
-    <script type="text/javascript" src="<%= @baseUrl %>assets/js/jquery-1.10.1.min.js"></script>
-    <script type="text/javascript">var BASE_URL = "<%= @baseUrl %>";</script>
-    <script type="text/javascript" src="<%= @baseUrl %>assets/js/viewer.js"></script>
-    <script type="text/javascript" src="<%= @baseUrl %>assets/js/lunr.min.js"></script>
+    <title>CloudCoreo Documentation</title>
+    <script type="text/javascript" src="assets/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript">var BASE_URL = "";</script>
+    <script type="text/javascript" src="assets/js/viewer.js"></script>
+    <script type="text/javascript" src="assets/js/lunr.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="/css/lib/animatecss/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="/css/app.css"/>
     <link rel="stylesheet" type="text/css" href="/css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="<%= @baseUrl %>assets/css/add-to-style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/add-to-style.css" />
    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -56,14 +56,14 @@
         <div class="container mblock">
 	    <div class="row">
             <div class="col-md-12 col-sm-12 col-lg-12">
-                <h3 class="green"><%= @manifest.title or @title %></h3>
+                <h3 class="green">CloudCoreo Documentation</h3>
                 <p class="bottom40">When does what happen? Why does who do what? Where is what how? Let us answer that for you.</p>
             </div>
 	      </div>
         </div>
     </div>
     <div class="bk-blue" style="padding-top: 11px">
-      <form action="<%= @baseUrl %>search.html">
+      <form action="search.html">
 	<div class="container mblock">
           <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 text-center">
 	    <div class="input-group">
@@ -77,11 +77,286 @@
     <div id="page" class="container">
       <div class="row">
 	<div class="col-md-3 bs-docs-sidebar">
-        <%- @include "_sidebar.html" %>
+        
+
+<nav id="toc" class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+    <ul id="sidebar" data-spy="affix" data-offset-top="260" data-offset-bottom="70" class="nav nav-stacked fixed">
+    
+    
+    
+        <li>
+	  
+	  @baseUrl = <br />
+	  @manifest = <br />
+	  entry.slug = directorystructure
+          <a href="directorystructure.html#directory-structure">Directory Structure</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+        <li>
+	  
+          <a href="#extends">extends</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+          <a href="#stack-">stack-*</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+          <a href="#services">services</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+          <a href="#boot-scripts">boot-scripts</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+          <a href="#operational-scripts">operational-scripts</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+          <a href="#shutdown-scripts">shutdown-scripts</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+          <a href="#overrides">overrides</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+	  @baseUrl = <br />
+	  @manifest = <br />
+	  entry.slug = configurationfiles
+          <a href="configurationfiles.html#configuration-files">Configuration Files</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+        <li>
+	  
+          <a href="#variable-config">Variable Config</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+          <a href="#cloud-services-config">Cloud Services Config</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+          <a href="#script-order">Script Order</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+	  @baseUrl = <br />
+	  @manifest = <br />
+	  entry.slug = cloudservices
+          <a href="cloudservices.html#cloud-services">Cloud Services</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+    
+
+    
+    Other Links
+    
+    
+	
+	<li><a target="_blank" href="http://docs.cloudcoreo.com/docs/frames/index">Service API Docs</a></li>
+	
+    
+    </ul>
+</nav>
+
 	</div>
 	<div class="col-md-9">
           <div id="content">
-            <%- @content %>
+            <h2>Search results for "<span id="search-q"></span>"</h2>
+<ul id="search-results"></ul>
+<script type="text/javascript" src="lunr-index.js"></script>
+<script type="text/javascript">
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    $(function() {
+        var q = getParameterByName('q'), 
+            ul = $('#search-results').empty(),
+            results = index.search(q);
+
+        $('#search-q').text(q);
+        if (results.length > 0) {
+            for (var i = 0; i < results.length; i++) {
+                ul.append($('<li><a href="' + results[i].ref + '">' + documentTitles[results[i].ref] + '</a></li>'));
+            }
+        } else {
+            ul.append($('<li class="no-results">No results found</li>'));
+        }
+    })
+</script>
+
           </div>
 	</div>
       </div>

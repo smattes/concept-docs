@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CloudCoreo Documentation</title>
+    <script type="text/javascript" src="assets/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript">var BASE_URL = "";</script>
+    <script type="text/javascript" src="assets/js/viewer.js"></script>
+    <script type="text/javascript" src="assets/js/lunr.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <title>CloudCoreo</title>
+    
+    <link rel="shortcut icon" href="/favicon.ico?v=2" />
+    <!--<link rel="stylesheet" type="text/css" href="https://www.cloudcoreo.com/lib/bootstrap/css/bootstrap.min.css"/>-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/lib/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/lib/animatecss/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/app.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/add-to-style.css" />
+   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+  </head>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar" data-offset="70">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a class="navbar-brand" href="/">
+            <img src="/img/logo.png" alt="logo" title="logo" />
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/getstarted">Get Started</a></li>
+            <li><a href="/docs">Documentation</a></li>
+            <li><a target="_blank" href="http://blog.cloudcoreo.com">Blog</a></li>
+            <li><a target="_blank" href="http://hub.cloudcoreo.com">Hub</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/login?page=register">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="jumbotron" role="main">
+        <div class="container mblock">
+	    <div class="row">
+            <div class="col-md-12 col-sm-12 col-lg-12">
+                <h3 class="green">CloudCoreo Documentation</h3>
+                <p class="bottom40">When does what happen? Why does who do what? Where is what how? Let us answer that for you.</p>
+            </div>
+	      </div>
+        </div>
+    </div>
+    <div class="bk-blue" style="padding-top: 11px">
+      <form action="search.html">
+	<div class="container mblock">
+          <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 text-center">
+	    <div class="input-group">
+              <input type="text" name="q" class="form-control ng-pristine ng-untouched ng-valid" placeholder="I'm looking for" aria-describedby="basic-addon2">
+              <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+            </div>
+          </div>
+	</div>
+      </form>
+    </div>
+    <div id="page" class="container">
+      <div class="row">
+	<div class="col-md-3 bs-docs-sidebar">
+        
+
+<nav id="toc" class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+    <ul id="sidebar" data-spy="affix" data-offset-top="260" data-offset-bottom="70" class="nav nav-stacked fixed">
+    
+    
+    
+        <li>
+	  
+	  @baseUrl = <br />
+	  @manifest = <br />
+	  entry.slug = directorystructure
+          <a href="directorystructure.html#directory-structure">Directory Structure</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+        <li>
+	  
+          <a href="#extends">extends</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+          <a href="#stack-">stack-*</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+          <a href="#services">services</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+          <a href="#boot-scripts">boot-scripts</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+          <a href="#operational-scripts">operational-scripts</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+          <a href="#shutdown-scripts">shutdown-scripts</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+          <a href="#overrides">overrides</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+	  @baseUrl = <br />
+	  @manifest = <br />
+	  entry.slug = configurationfiles
+          <a href="configurationfiles.html#configuration-files">Configuration Files</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+        <li>
+	  
+          <a href="#variable-config">Variable Config</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+          <a href="#cloud-services-config">Cloud Services Config</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+          <a href="#script-order">Script Order</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+        <li>
+	  
+	  @baseUrl = <br />
+	  @manifest = <br />
+	  entry.slug = cloudservices
+          <a href="cloudservices.html#cloud-services">Cloud Services</a>
+	  
+            
+                
+    
+    <ul class="nav nav-stacked">
+    
+    
+    
+    </ul>
+    
+
+            
+        </li>
+    
+    
+
+    
+    Other Links
+    
+    
+	
+	<li><a target="_blank" href="http://docs.cloudcoreo.com/docs/frames/index">Service API Docs</a></li>
+	
+    
+    </ul>
+</nav>
+
+	</div>
+	<div class="col-md-9">
+          <div id="content">
+            <h2 id="configuration-files">Configuration Files</h2>
+<p>There are a few configuration files that exist in the CloudCoreo convention. These files are all overrideable.</p>
+<h3 id="variable-config">Variable Config</h3>
+<p>Defined by the <code>config.yaml</code> file.</p>
+<p>The <code>config.yaml</code> file defines variables for the stack. It resides in the <code>&lt;repository-dir&gt;</code> base directory. These are exposed in the UI to any user who is utilizing the stack. The yaml file <strong>cannot contain tab characters</strong>. Although the CloudCoreo CLI does work to mitigate this mistake, we must stress this can cause your stack to break.</p>
+<h3 id="cloud-services-config">Cloud Services Config</h3>
+<p>Defined by the <code>config.rb</code> file.</p>
+<p>The <code>config.rb</code> file resides in the <code>&lt;repository-dir&gt;/services</code> directory and exists to define interactions within the cloud provider in which you are operating. The <a href="http://docs.cloudcoreo.com/docs/frames/index">API Documentation</a> provides specifics.</p>
+<p>We define a <strong><em>resource</em></strong> as the actual cloud service you are interacting with, such as a <em>Route53</em> entry or <em>Autoscaling Group</em>. Resources are defined by the desired configuration within your cloud provider account.
+In general, the structure is:</p>
+<pre><code>&lt;resource&gt; &quot;&lt;name&gt;&quot; do
+    &lt;property1&gt; &lt;value&gt;
+    &lt;property2&gt; &lt;value&gt;
+    &lt;property3&gt; &lt;value&gt;
+    &lt;property4&gt; &lt;value&gt;
+end
+</code></pre><p>For Example:</p>
+<pre><code>coreo_aws_vpc_vpc &quot;my-vpc&quot; do
+  action :sustain
+  cidr &quot;12.0.0.0/16&quot;
+  internet_gateway true
+end
+</code></pre><p>In the above example, CloudCoreo would create a VPC with the CIDR address of &quot;12.0.0.0/16&quot; and attach an <em>internet gateway</em> to the VPC to allow traffic to the public subnets (which haven&#39;t been defined in this specific example).</p>
+<p>This is all very inflexible in terms of cloning, which is why <strong><em>templating</em></strong> has been built into the system.</p>
+<h4 id="templating-system">Templating System</h4>
+<p>Templateing allows variables to be inserted into the system at runtime, thus allowing a single template to be used in many different environements. The substitution comes from one of:</p>
+<ol>
+<li>The value provided by the user in the CloudCoreo UI</li>
+<li>The values set during the run of the CLI tool</li>
+<li>The default set in the config.yaml file</li>
+</ol>
+<p>This is the order in which they are applied. e.g. If there is no UI or CLI variable set, CloudCoreo will apply the default.</p>
+<p>The look of the variables is similar to <em>bash</em> but many of the bash-isms to not apply. Use a variable as follows <code>${VARIABLE_NAME}</code>. For instance, the above example of creating a VPC would be more useful with the following templating.</p>
+<pre><code>coreo_aws_vpc_vpc &quot;${VPC_NAME}&quot; do
+  action :sustain
+  cidr &quot;${VPC_CIDR}&quot;
+  internet_gateway true
+end
+</code></pre><p>Within your config.yaml file, you can now call out a <code>VPC_NAME</code> variable and apply defaults. This variable name will show up in the web UI for any users to modify.</p>
+<h4 id="overriding-resources">Overriding Resources</h4>
+<p>The <code>services/</code> directory honors the heirarchy we have discussed elsewhere. The difference, however, is that in the <code>config.rb</code> file each <strong><em>resource</em></strong> is overridable on an individual basis. This is best explained with an example.</p>
+<p>Lets say we have the following directory structure and files:</p>
+<ul>
+<li><code>&lt;repository-dir&gt;/extends/services/config.rb</code>
+and</li>
+<li><code>&lt;repository-dir&gt;/services/config.rb</code></li>
+</ul>
+<p>We know from that anything in the <code>extends/services</code> directory will be run <strong><em>before</em></strong> the root <code>services</code> directory. This is true, however the resources are compiled before running. What does this mean?</p>
+<p><strong>Any <em>resource</em> in the root level <code>services/config.rb</code> file will override any <em>resource</em> located in the <code>extends/services/config.rb</code> file, where the key is the <code>&lt;resource&gt; &quot;&lt;name&gt;&quot; do</code> line.</strong> This still adheres to our previous rule we have been discussing in an interesting way. Since the resources are effectively keys, as we get closer and close to the root, the keys are added to the compilation stack in order, thus overwriting (overriding) the previously added resources. </p>
+<p>Once again, an example will work much better for this description.</p>
+<p>Take, for instance, the directory and file structure we have already described:</p>
+<ul>
+<li><code>&lt;repository-dir&gt;/extends/services/config.rb</code>
+and</li>
+<li><code>&lt;repository-dir&gt;/services/config.rb</code></li>
+</ul>
+<p>Lets assume we have a <strong><em>VPC</em></strong> resource in the <code>extends/services/config.rb</code> file as follows:</p>
+<pre><code>coreo_aws_vpc_vpc &quot;${VPC_NAME}&quot; do
+  action :sustain
+  cidr &quot;12.0.0.0/16&quot;
+  internet_gateway true
+end
+</code></pre><p>This doesn&#39;t do us any good because we can&#39;t clone this to different environments. We need to have templating and variables, and we want to add some tags to the VPC. We can override this resource by keying off the <code>&lt;resource&gt; &quot;&lt;name&gt;&quot; do</code> line and placing the new block in the root <code>services/config.rb</code> file. So, within the <code>&lt;repository-dir&gt;/services/config.rb</code> file we call out a new <strong><em>VPC</em></strong> as follows:</p>
+<pre><code>coreo_aws_vpc_vpc &quot;${VPC_NAME}&quot; do
+  action :sustain
+  cidr &quot;${VPC_CIDR}&quot;
+  internet_gateway true
+  tags [
+     &quot;Name=${VPC_NAME_TAG}&quot;,
+     &quot;Team=${VPC_TEAM}&quot;
+  ]
+end
+</code></pre><p>The point of this is that the <em>key</em> is the first line, in this case <code>coreo_aws_vpc_vpc &quot;${VPC_NAME}&quot; do</code>. This means that as CloudCoreo is compiling the resources, it will see the <strong><em>VPC</em></strong> resource in the root <strong><em>last</em></strong> and will replace any existing blocks with this same resource key. The important part is that CloudCoreo will honor the positioning of the resources that it is overriding and simply override the block. We call this <strong><em>anchoring</em></strong>.</p>
+<h4 id="anchoring">Anchoring</h4>
+<p>Anchoring is what CloudCoreo does with overridden resources. The key (<code>&lt;resource&gt; &quot;&lt;name&gt;&quot; do</code>) that is being overriden becomes an anchor for all pre-requisite resources found in an overriding file. That&#39;s a mouthful. Here&#39;s an abstract example. Please do not pay attention to the blocks because they are irrelevant and shortened for clarity.</p>
+<p>Begin again with our standard directory struture we have been using:</p>
+<ul>
+<li><code>&lt;repository-dir&gt;/extends/services/config.rb</code>
+and</li>
+<li><code>&lt;repository-dir&gt;/services/config.rb</code></li>
+</ul>
+<p>In our <code>extends/services/config.rb</code> file we will have a <strong><em>subnet definition</em></strong> and an <strong><em>elastic load balancer</em></strong>.</p>
+<pre><code>coreo_aws_vpc_subnet &#39;public-subnet&#39; do
+   vpc &#39;my-vpc&#39;
+   map_public_ip_on_launch true
+end
+
+coreo_aws_ec2_elb &#39;my-elb&#39; do
+   type &#39;public&#39;
+   subnet &#39;public-subnet&#39;
+end
+</code></pre><p>We decide this is not adequate. First of all we want the elb to contain a security group and we want it to be an <code>internal</code> load balancer and not public. To achieve this we move to our root <code>services/config.rb</code> file and add our key resource. This will become an anchor and we can modify anything other than the key itself.</p>
+<pre><code>coreo_aws_ec2_elb &#39;my-elb&#39; do
+   type &#39;internal&#39;
+   subnet &#39;private-subnet&#39;
+   security_groups [&#39;my-elb-sg&#39;]
+end
+</code></pre><p>This one is modified correctly, but we are missing some pieces, namely the private subnet and the security groups. We re-edit our file knowing our anchor bring the pieces along that it requires. Our new root-level <code>services/config.rb</code> file looks as follows.</p>
+<pre><code>coreo_aws_vpc_subnet &#39;private-subnet&#39; do
+   vpc &#39;my-vpc&#39;
+   map_public_ip_on_launch false
+end
+
+coreo_aws_ec2_securityGroup &#39;my-elb-sg&#39; do
+   vpc &#39;my-vpc&#39;
+   allows [ 
+            { 
+              :direction =&gt; :ingress,
+              :protocol =&gt; :tcp,
+              :ports =&gt; ${INGRESS_PORTS},
+              :cidrs =&gt; ${INGRESS_CIDRS}
+            }
+          ]
+end
+
+coreo_aws_ec2_elb &#39;my-elb&#39; do
+   type &#39;internal&#39;
+   subnet &#39;private-subnet&#39;
+   security_groups [&#39;my-elb-sg&#39;]
+end
+</code></pre><p>The <strong><em>anchor</em></strong> in this is the elb resource. What this means is that anything above that has not already overridden something will be considered a prerequisite of the resource doing the overrideing (the key). This means that the root level <code>services/config.rb</code> file&#39;s coreo_aws_ec2_elb resource block will override the one found in the <code>extends/services/config.rb</code> file. Not only that, but all the resources above the key in the root level will maintain order and override with the key. The final compliation will be a merge of the two files with the <em>anchor</em> located in the same place as the orriginal, with any other non-overriding resources preceding it from the overriding file. Here is what the compiled version would become.</p>
+<pre><code>coreo_aws_vpc_subnet &#39;public-subnet&#39; do
+   vpc &#39;my-vpc&#39;
+   map_public_ip_on_launch true
+end
+
+coreo_aws_vpc_subnet &#39;private-subnet&#39; do
+   vpc &#39;my-vpc&#39;
+   map_public_ip_on_launch false
+end
+
+coreo_aws_ec2_securityGroup &#39;my-elb-sg&#39; do
+   vpc &#39;my-vpc&#39;
+   allows [ 
+            { 
+              :direction =&gt; :ingress,
+              :protocol =&gt; :tcp,
+              :ports =&gt; ${INGRESS_PORTS},
+              :cidrs =&gt; ${INGRESS_CIDRS}
+            }
+          ]
+end
+
+coreo_aws_ec2_elb &#39;my-elb&#39; do
+   type &#39;internal&#39;
+   subnet &#39;private-subnet&#39;
+   security_groups [&#39;my-elb-sg&#39;]
+end
+</code></pre><p>The &#39;<em>public-subnet</em>&#39; resource has been included from the <code>extends/services/config.rb</code> file, while the &#39;<em>my-elb</em>&#39; from the <code>extends/services/config.rb</code> essentially <em>becomes</em> the &#39;<em>private-subnet</em>&#39; + &#39;<em>my-elb-sg</em>&#39; + &#39;<em>my-elb</em>&#39;.</p>
+<h3 id="script-order">Script Order</h3>
+<p>Defined by the <code>order.yaml</code> file is the configuration file that travels along with and is located in the <code>boot-scripts</code> directory. The format is <em>yaml</em> which means that <strong>tab indentations are an error</strong>. Here is an example:</p>
+<pre><code>order:
+    - install_packges.sh
+    - run_chef.sh
+</code></pre><p>CloudCoreo will run (as root) each script in order. The proccess is to <strong>chmod +x</strong> the files and run with a <strong>./<filename></strong> so make sure the shebang is correct.</p>
+
+
+
+
+          </div>
+	</div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6">
+            <a href="https://www.linkedin.com/company/cloudcoreo"><img alt="facebook icon" height="40" src="/img/icons/linkedin-64.png"></a>
+            <a href="https://plus.google.com/b/110620252437199091978"><img alt="google plus icon" height="40" src="/img/icons/google-plus-64.png"></a>
+            <a href="https://twitter.com/cloudcoreo"><img alt="twitter icon" height="40" src="/img/icons/twitter-64.png"></a>
+          </div>
+          <div class="col-xs-6 text-right">
+            <div>
+              <a target="_blank" href="http://hub.cloudcoreo.com"><img alt="search icon" height="40" src="/img/icons/search-64.png"></a>
+              <a href="/contact"><img alt="help icon" height="40" src="/img/icons/help-64.png"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-48747618-1', {'cookieDomain': 'cloudcoreo.com'});
+       ga('send', 'pageview');
+
+    </script>
+    <script>
+      var offset = 70;
+      $('.nav li a').click(function(event) {
+          if ( /^#/.test($(this).attr('href')) ){
+              event.preventDefault();
+          }
+          $($(this).attr('href'))[0].scrollIntoView();
+          scrollBy(0, -offset);
+      });
+    </script>
+</body>
+</html>
