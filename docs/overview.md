@@ -1,4 +1,4 @@
-# The Stack
+# Stack Anatomy
 'Stack' is, admittedly, very much an over used term in our industry. It seems that for some reason, everyone is quick to redefine it. 
 
 ...and we are no different!
