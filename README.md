@@ -3,7 +3,7 @@ This repo contains the doc files for generating the [CloudCoreo Docs](https://ww
 
 ### How it works
 #### docs.cat 
-the list of doc files we need to concatonate.
+the list of doc files we need to concatenate.
 #### gen_docs.sh
 nothing much really - just wrap the cat command
 #### themes/cloudcoreo/*
