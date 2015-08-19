@@ -1,6 +1,7 @@
-These docs are auto-generated. Please contribue here: [https://github.com/CloudCoreo/concept-docs](https://github.com/CloudCoreo/concept-docs)
 
 # Stack Anatomy
+First of all, these docs are auto-generated. Please contribue here: [https://github.com/CloudCoreo/concept-docs](https://github.com/CloudCoreo/concept-docs)
+
 'Stack' is, admittedly, very much an over used term in our industry. It seems that for some reason, everyone is quick to redefine it. 
 
 ...and we are certainly no different!
