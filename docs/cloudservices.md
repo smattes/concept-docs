@@ -3,7 +3,7 @@ Defined by the `config.rb` file.
 
 The `config.rb` file resides in the `<repository-dir>/services` directory and exists to define interactions within the cloud provider in which you are operating. The [API Documentation](http://docs.cloudcoreo.com/docs/frames/index) provides specifics.
 
-We define a ***resource*** as the actual cloud service you are interacting with, such as a *Route53* entry or *Autoscaling Group*. Resources are defined by the desired configuration within your cloud provider account.
+We define a ***resource*** as the actual cloud service you are interacting with, such as a [*Route53*](https://aws.amazon.com/route53/) entry or [*Autoscaling Group*](https://aws.amazon.com/autoscaling/). Resources are defined by the desired configuration within your cloud provider account.
 In general, the structure is:
 ```
 <resource> "<name>" do
@@ -21,7 +21,7 @@ coreo_aws_vpc_vpc "my-vpc" do
   internet_gateway true
 end
 ```
-In the above example, CloudCoreo would create a VPC with the CIDR address of "12.0.0.0/16" and attach an *internet gateway* to the VPC to allow traffic to the public subnets (which haven't been defined in this specific example).
+In the above example, CloudCoreo would create a VPC with the CIDR address of "12.0.0.0/16" and attach an *Internet gateway* to the VPC to allow traffic to the public subnets (which haven't been defined in this specific example).
 
 This is all very inflexible in terms of cloning, which is why ***templating*** has been built into the system.
 
