@@ -1,7 +1,7 @@
 # Stack Anatomy
 'Stack' is, admittedly, very much an over used term in our industry. It seems that for some reason, everyone is quick to redefine it. 
 
-...and we are no different!
+...and we're no different!
 
 A 'stack' for us is everything in your cloud deployment. ***Virtual Machines*** are a given, but we include *everything else* as well. What does *everything else* actually mean? Well, *everything*.
 
