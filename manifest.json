@@ -4,6 +4,7 @@
 	"docs.md"
     ],
     "maxTocLevel": 3,
+    "baseurl": "docs/",
     "css": "https://www.cloudcoreo.com/css/style.css",
     "links": [
 	["Cloud Service API Docs", "http://docs.cloudcoreo.com/docs/frames/index", "_blank"]

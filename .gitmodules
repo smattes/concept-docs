@@ -1,3 +1,0 @@
-[submodule "webapp"]
-	path = webapp
-	url = git@bitbucket.org:cloudcoreo/webapp.git
