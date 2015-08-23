@@ -24,8 +24,41 @@ variables:
       us-west-2: ami-e7527ed7
     type: case
 ```
-### Types
+### property: default
+### property: description
+### property: required
+### property: overrides
+Overrides allow you to effective take ownership of or rename the a variable used in extended stacks. This is useful if your stack includes multiple of the same stack but you wish the variables to be set differently. This is best explained by an example.
+
+Take, for instance, the following stack structure. `my-stack` is the stack im creating, and i've added the same stack twice for some reason, perhaps a web server and a scheduler. The directory structure might look like this:
+```
+my-stack/
+├── config.yaml
+├── stack-scheduler
+│   └── config.yaml
+└── stack-webserver
+    └── config.yaml
+```
+where both of these `stack-*` directories are pointers to the exact same stack.
+
+Now lets look at the `config.yaml` in the `stack-*` directories. Knowing that each of these stacks are identical, we know that the `config.yaml` files are identical. Here it is:
+```
+variables:
+  DNS_ENTRY:
+    default: my-server.example.com
+    required: true
+    type: string
+    description: this is the dns record to assign to the server
+```
+
+Adding the `DNS_ENTRY` variable to your top level `config.yaml` file that is under your control allows you to override all of the `DNS_ENTRY` values below you. This is global though, meaning that it will change **both** the stack-scheduler value as well as the stack-webserver value and anything below them.
+
+What will happen here is both stacks will get the same variable, which is not good in this case. Assuming this variable is used to manage DNS, it means that the dns records will stomp on eachother and one will end up not having an entry. 
+
+We can't have that. The answer is `overrides
+### property: type
 #### string
+The string type is fairly self-explainitory
 #### number
 #### case
 
