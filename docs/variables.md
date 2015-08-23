@@ -85,11 +85,30 @@ MY_NEW_DNS:
 We have added a `stack-scheduler::` prefix to the overrides `DNS_ENTRY` entry. This will override DNS_ENTRY within the stack-schedule and ***not*** in the stack-webserver. The stack-webserver will still honor any entries for `DNS_ENTRY` and will no nothing of the `MY_NEW_DNS` variable that has been added.
 
 ### property: type
+The `type` property exists mostly for validation
 #### string
-The string type is fairly self-explainitory
+The `string` type is fairly self-explainitory. This expects a string value and will treat the validation as such.
 #### number
+The `number` type validates numbers. This can be integers, floats etc.
+#### array
+The `array` type expects arrays in the yaml file. It will also display in the web-ui as a list.
 #### case
-
+The `case` type is used in order to select values without asking the user for input. For instance:
+```
+MY_SWAP_GB:
+  switch: SIZE
+    cases:
+      m3.medium: 1
+      m3.large: 1.5
+      m3.xlarge: 2
+    type: case
+```
+In this case an AMI will be selected based on the region. The user has no option of which ami is selected, but instead it is selected for them based on the value of the region.
 
 ### Instance Variables
+Instance variables are variables set by the AppStack that is actually running. You can use them simply by adding the `INSTANCE::` prefix to the variable you wish to use.
+#### `INSTANCE::region`
+This will return a string representing the region in which the app stack instance is requested to run.
+
 ### Stack Variables
+Stack variables are set during run time and can be used to access various values created during the stack creation / update runtime. Access STACK variables using the `STACK::` annotation.
