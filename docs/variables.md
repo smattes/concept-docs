@@ -25,8 +25,13 @@ variables:
     type: case
 ```
 ### property: default
+The default value of a variable is applied if no user input is specified and no parent directory re-sets the default. For instance, if a user sets a value in the we UI, it will override the default.
+
+Similarly if a parent directory sets a new default, it will override the current default.
 ### property: description
+The description is exposed in the web-ui as a tooltip to the users utilizing the stack.
 ### property: required
+Required variables must be supplied to launch a stack. If it is not, CloudCoreo will flag it as an error and force the user to input valid data.
 ### property: overrides
 Overrides allow you to effective take ownership of or rename the a variable used in extended stacks. This is useful if your stack includes multiple of the same stack but you wish the variables to be set differently. This is best explained by an example.
 
