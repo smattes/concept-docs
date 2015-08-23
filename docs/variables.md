@@ -29,13 +29,13 @@ The default value of a variable is applied if no user input is specified and no 
 
 Similarly if a parent directory sets a new default, it will override the current default.
 ### property: description
-The description is exposed in the web-ui as a tooltip to the users utilizing the stack.
+The description is exposed in the web-ui as a tool-tip to the users utilizing the stack.
 ### property: required
 Required variables must be supplied to launch a stack. If it is not, CloudCoreo will flag it as an error and force the user to input valid data.
 ### property: overrides
 Overrides allow you to effective take ownership of or rename the a variable used in extended stacks. This is useful if your stack includes multiple of the same stack but you wish the variables to be set differently. This is best explained by an example.
 
-Take, for instance, the following stack structure. `my-stack` is the the one im creating, and i've 'added' the same stack twice, perhaps a web server and a scheduler. The directory structure might look like this:
+Take, for instance, the following stack structure. `my-stack` is the the one being created, and I've 'added' the same stack twice, perhaps a web server and a scheduler. The directory structure might look like this:
 ```
 my-stack/
 ├── config.yaml
@@ -58,11 +58,11 @@ variables:
 
 Adding the `DNS_ENTRY` variable to your top level `config.yaml` file that is under your control allows you to override all of the `DNS_ENTRY` values below you. This is global though, meaning that it will change **both** the stack-scheduler value as well as the stack-webserver value and anything below them.
 
-What will happen here is both stacks will get the same variable, which is not good in this case. Assuming this variable is used to manage DNS, it means that the dns records will stomp on eachother and one will end up not having an entry. 
+What will happen here is both stacks will get the same variable, which is not good in this case. Assuming this variable is used to manage DNS, it means that the dns records will stomp on each other and one will end up not having an entry. 
 
 We can't have that. The answer is `overrides`.
 
-When you add an overrides property to a config.yaml file in the <stack>::<name> format, it modifys the variable(s) it calls out, and only that variable. What's more, it modifys the variable **starting in the stack** and everything from that stack down. If the <stack>:: is left out, it will modify the variable in all stacks. Once again, an example make this easier to understand. Lets use the same structure we have set up.
+When you add an overrides property to a config.yaml file in the <stack>::<name> format, it modifies the variable(s) it calls out, and only that variable. What's more, it modifies the variable **starting in the stack** and everything from that stack down. If the <stack>:: is left out, it will modify the variable in all stacks. Once again, an example make this easier to understand. Lets use the same structure we have set up.
 ```
 my-stack/
 ├── config.yaml      | empty file
@@ -78,7 +78,7 @@ MY_NEW_DNS:
     - DNS_ENTRY
   default: my-new-dns.example.com
 ```
-Whatever the `MY_NEW_DNS` variable is set to will also be propagated down to all `DNS_ENTRY` values in all stacks added 'under' this config.yaml This also means that any stack inheriting or adding this stack must use `MY_NEW_DNS` because `DNS_ENTRY` effectivly no longer exists (it's been overriden).
+Whatever the `MY_NEW_DNS` variable is set to will also be propagated down to all `DNS_ENTRY` values in all stacks added 'under' this config.yaml This also means that any stack inheriting or adding this stack must use `MY_NEW_DNS` because `DNS_ENTRY` effectively no longer exists (it's been overridden).
 
 If the `<stack>::` notation is used, the same rules apply, but this time only to the stack(s) it calls out. For instance if we change our override property slightly:
 ```
@@ -92,7 +92,7 @@ We have added a `stack-scheduler::` prefix to the overrides `DNS_ENTRY` entry. T
 ### property: type
 The `type` property exists mostly for validation
 #### string
-The `string` type is fairly self-explainitory. This expects a string value and will treat the validation as such.
+The `string` type is fairly self-explanatory. This expects a string value and will treat the validation as such.
 #### number
 The `number` type validates numbers. This can be integers, floats etc.
 #### array
@@ -113,7 +113,7 @@ In this case an AMI will be selected based on the region. The user has no option
 ### Instance Variables
 Instance variables are variables set by the AppStack that is actually running. You can use them simply by adding the `INSTANCE::` prefix to the variable you wish to use.
 #### `INSTANCE::region`
-This will return a string representing the region in which the app stack instance is requested to run.
+This will return a string representing the region in which the AppStack instance is requested to run.
 
 ### Stack Variables
 Stack variables are set during run time and can be used to access various values created during the stack creation / update runtime. Access STACK variables using the `STACK::` annotation.
