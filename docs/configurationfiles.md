@@ -1,5 +1,5 @@
 ## Configuration Files
-There are a few configuration files that exist in the CloudCoreo convention. These files are all override-able.
+There are a few configuration files that exist in the CloudCoreo convention. These files are all able to be overridden.
 
 ### Variable Config
 Defined by the `config.yaml` file.
