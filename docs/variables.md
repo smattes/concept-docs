@@ -1,6 +1,6 @@
 ## Variables
 
-The root directory can contain a `config.yaml` file to define variables for use in the stack. Variables allow a user to create many copies of CloudCoreo stacks without creating conflict (unless conflict is desired of course). There are a number of properties that can be set. Here is an example `config.yaml` file:
+The root directory can contain a `config.yaml` file which define variables for use in the stack. Variables allow a user to create many copies of CloudCoreo stacks without creating conflict (unless conflict is desired of course). There are a number of properties that can be set. Here is an example `config.yaml` file:
 ```
 variables:
   MY_DNS_ZONE:
