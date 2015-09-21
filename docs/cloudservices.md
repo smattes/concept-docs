@@ -53,7 +53,7 @@ For instance, say we have the following directory structure and files:
 
 Based on that, we know that anything in the `extends/services` directory will be run ***before*** the root services directory. While this is true, it also means that the resources are compiled before running. Simply, ***any resource in the root level `services/config.rb` file will override any resource located in the `extends/services/config.rb` file, where the key is the `<resource> "<name>" do` line***.
 
-This adheres to our our previously discussed rule in an interesting way. Since the resources are effectively keys, as we get closer and closer to the root, the keys are added to the compilation stack in order, which overwrites (overrides) the previously added resources. 
+This follows the rule regarding overrides we talk about above. Since the resource names are effectively keys, as we get closer and closer to the root, they are added to the compilation stack in the defined order and overwrite (override) the previously added resources. 
 
 Let's illlustrate this with an example utilizing the directory and file structure we have already described:
 
