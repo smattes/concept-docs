@@ -53,6 +53,8 @@ For instance, say we have the following directory structure and files:
 
 Based on that, we know that anything in the `extends/services` directory will be run ***before*** the root services directory. While this is true, it also means that the resources are compiled before running. Simply, ***any resource in the root level `services/config.rb` file will override any resource located in the `extends/services/config.rb` file, where the key is the `<resource> "<name>" do` line***.
 
+**Note:** For our purposes, the key is defined as the name of the resource. There can only be one key/name of resource within an individual stack. For instance, if you have `coreo_aws_ec2_instance "my-instance" do` somewhere and again have `coreo_aws_ec2_instance "my-instance" do` close to the root, the root will win! And it will override the first instance. Simply put, ***the resource name is the key and vice versa***.
+
 This follows the rule regarding overrides we talk about above. Since the resource names are effectively keys, as we get closer and closer to the root, they are added to the compilation stack in the defined order and overwrite (override) the previously added resources. 
 
 Let's illlustrate this with an example utilizing the directory and file structure we have already described:
