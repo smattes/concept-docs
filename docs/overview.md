@@ -1,4 +1,4 @@
-**Note:** these docs are auto-generated. If you find mistakes, or see that something is missing, please [contribute] (https://github.com/CloudCoreo/concept-docs)!
+***Note:*** *these docs are auto-generated. If you find mistakes, or see that something is missing, please [contribute](https://github.com/CloudCoreo/concept-docs)!*
 
 # Stack Anatomy
 The term 'stack' is, admittedly, an over-used word in the industry. Many are quick to redefine or expand upon the meaning of the word for their uses. And we are certainly no different!
