@@ -31,7 +31,13 @@ Similarly, if a parent directory sets a new default it will override the current
 ### property: description
 The description is exposed in the web-ui as a tool-tip to the users utilizing the stack.
 ### property: required
-If a required variable is set to `true` the variable is a required variable, which *must* be supplied to launch a stack. If they are not, CloudCoreo will flag them as errors and force the user to input valid data.
+A variable is made to be required by setting the required property to 'true'. Required variables *must* be supplied to launch a stack. If they are not, CloudCoreo will flag them as errors and force the user to input valid data. Here's an example:
+
+*MY_VAR:
+default: hi
+definition: say hi
+required: true*
+
 ### property: overrides
 Overrides allow you to effectively take ownership of or rename a variable used in extended stacks. This is useful if your stack includes multiples of the same stack but you wish the variables to be set differently.
 
@@ -116,4 +122,4 @@ Instance variables are variables set by the AppStack that is actually running. Y
 This will return a string representing the region in which the AppStack instance is requested to run.
 
 ### Stack Variables
-Stack variables are set during runtime and can be used to access various values created during the stack creation/update runtime. Access STACK variables using the `STACK:: annotation`.
+Stack variables are set during runtime and can be used to access various values created during the stack creation/update runtime. Access STACK variables using `STACK::`.

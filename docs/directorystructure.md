@@ -1,10 +1,10 @@
 ## Directory Structure
 CloudCoreo relies on convention over configuration for the most part, achieving simplicity and flexibility. Each repository can contain whatever you want, which is useful for running scripts or laying down solid code. There are some directories that we reserve the right to, and below you'll see a list of those directories and their functions.
 
-The directory structure precisely relates to how CloudCoreo works its magic. The convention we have defined dictates what gets overridden, what runs during the boot of a server, what runs as Cloud Services, and more.  The [CLI Tool](https://github.com/CloudCoreo/cloudcoreo-cli) will do much of the work for you, but you should still know what it all means. That's where this page, and the wealth of knowledge included in it, is going to come in handy. Read on!
+The directory structure precisely relates to how CloudCoreo actually works. The convention we have defined dictates what gets overridden, what runs during the boot of a server, what runs as Cloud Services, and more.  The [CLI Tool](https://github.com/CloudCoreo/cloudcoreo-cli) will do much of the work for you, but you should still know what it all means. That's where this page, and the wealth of knowledge included in it, is going to come in handy. Read on!
 
 ### extends
-The `extends directory` is one of the most basic, but important, concepts in CloudCoreo. This directory enables you to **leverage the work of others** and bring it all within your own deployment. You can literally crowdsource your stack, which saves you oodles of time.
+`extends` is one of the most basic, but important, concepts in CloudCoreo. This directory enables you to **leverage the work of others** and bring it all within your own deployment. You can literally crowdsource your stack, which saves you oodles of time.
 
 `extends` is the base for anything you are doing in this stack. **Any and all work defined in `extends` will be completed before moving on to the parent directory.**
 
@@ -24,7 +24,7 @@ The `services` directory exists to define the stack's interaction with the cloud
 The `<repository-dir>/boot-scripts` directory exists to define boot time configuration of a server. If this directory exists, CloudCoreo will run scripts as defined by:
 
 1. The directory layout (`extends`, `stack-*`, etc.)
-2. Then the order defined in the `order.yaml` file within this directory
+1. Then the order defined in the `order.yaml` file within this directory
 
 As an example, if your directory structure contains the following paths CloudCoreo will run each script in the `extends/stack-example/extends/boot-scripts/order.yaml` file before moving on to the `extends/stack-example/boot-scripts/order.yaml`:
 

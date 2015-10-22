@@ -15,4 +15,4 @@ order:
     - install_packages.sh
     - run_chef.sh
 ```
-CloudCoreo will run (as root) each script in order. The process is to **chmod + X** the files and run with a **./<filename>** So make sure the whole shebang is correct!
+CloudCoreo will run (as root) each script in order. The process is to **chmod +x** the files and run with a **./<filename>** So make sure the shebang is correct.
