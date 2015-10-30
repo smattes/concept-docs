@@ -33,10 +33,12 @@ The description is exposed in the web-ui as a tool-tip to the users utilizing th
 ### property: required
 A variable is made to be required by setting the required property to 'true'. Required variables *must* be supplied to launch a stack. If they are not, CloudCoreo will flag them as errors and force the user to input valid data. Here's an example:
 
-*MY_VAR:
-default: hi
-definition: say hi
-required: true*
+```
+MY_VAR:
+  default: hi
+  definition: this says hi
+  required: true
+```
 
 ### property: overrides
 Overrides allow you to effectively take ownership of or rename a variable used in extended stacks. This is useful if your stack includes multiples of the same stack but you wish the variables to be set differently.
