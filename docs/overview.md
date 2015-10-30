@@ -1,14 +1,9 @@
+***Note:*** *these docs are auto-generated. If you find mistakes, or see that something is missing, please [contribute](https://github.com/CloudCoreo/concept-docs)!*
 
 # Stack Anatomy
-First things first, these docs are auto-generated. If there are mistakes or you find that something is missing, please contribute here: [https://github.com/CloudCoreo/concept-docs](https://github.com/CloudCoreo/concept-docs)
+The term 'stack' is, admittedly, an over-used word in the industry. Many are quick to redefine or expand upon the meaning of the word for their uses. And we are certainly no different!
 
-Let's get into it.
-
-'Stack' is, admittedly, very much an over used term in our industry. It seems that for some reason, everyone is quick to redefine it. 
-
-...and we are certainly no different!
-
-A 'stack' for us is everything in your cloud deployment. ***Virtual Machines*** are a given, but we include *everything else* as well. What does *everything else* actually mean? Well, *everything*.
+We define a `stack`, as it works for us in the CloudCoreo platform, as everything within your cloud deployment. It's a given that Virtual Machines are included, but in our version of a stack we also include *everything else*. So, what does *everything else* actually mean? Well... *everything*:
 
 * Networks
 * Managed Services
@@ -25,4 +20,4 @@ A 'stack' for us is everything in your cloud deployment. ***Virtual Machines*** 
 
 The list goes on and on.
 
-To create or maintain a `stack` in CloudCoreo, you have to know how it is all set up. When you see it all spelled out, it is really quite simple. The following is our attempt to spell it out.
+To create or maintain a `stack` in CloudCoreo, you have to know how it is all set up. It's really quite a simple process. Let's dive in...

@@ -1,2 +1,2 @@
 # The Web UI
-Documentation for how to use the web interface is **Coming Soon!!**
+How-to documentation for using the web interface is **coming soon!**
