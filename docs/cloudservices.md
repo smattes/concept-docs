@@ -33,7 +33,7 @@ Templating allows variables to be inserted into the system at runtime, allowing 
 
 This is the order in which they are applied, so if there is no UI or CLI variable set, CloudCoreo will apply the default.
 
-The look of the variables is similar to *bash* but many of the "bash-isms" do not apply. To use a variable use `$[]` to contain it, like `${VARIABLE_NAME}`. The above example of creating a VPC would be more useful with the following templating:
+The look of the variables is similar to *bash* but many of the "bash-isms" do not apply. To use a variable use `${}` to contain it, like `${VARIABLE_NAME}`. The above example of creating a VPC would be more useful with the following templating:
 ```
 coreo_aws_vpc_vpc "${VPC_NAME}" do
   action :sustain
